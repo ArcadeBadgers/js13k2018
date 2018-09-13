@@ -1,0 +1,6 @@
+AFRAME.registerComponent('restart', {
+schema:
+{
+},
+
+});

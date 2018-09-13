@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>-link></title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                border: 0;
+                overflow: hidden; /*  Disable scrollbars */
+                display: block;  /* No floating content on sides */
+            }
+        </style>
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="polyline.js"></script>
+        <script src="portable.js"></script>
+        <script src="power.js"></script>
+        <script src="levelup.js"></script>
+        <script src="restart.js"></script>
+        <script src="game-system.js"></script>
+</head>
+<body>
+    <a-scene
+	fog="type: exponential; density: 0.035; color: #330022">
+	<a-sky color="#330033"></a-sky>
+		<a-entity
+		id="camera-rig"
+		position="0.0 0.1 0.0">
+			<a-entity
+			id="camera"
+			camera
+			look-controls>
+				<a-cursor />
+				<a-entity position="-0.1 0 0">
+					<a-text id="power-marker" opacity=0.25 width=2.5 align="right" value=""></a-text>
+				</a-entity>
+				<a-entity position="0.1 0.1 0">
+					<a-text id="height-marker" opacity=0.25 width=1.5 align="left" value="0m"></a-text>
+				</a-entity>
+				<a-entity position="0.1 -0.1 0">
+					<a-text id="money-marker" opacity=0.25 width=1.5 align="left" value="$0"></a-text>
+				</a-entity>
+			</a-entity>
+		</a-entity>
+    </a-scene>
+</body>
+</html>
